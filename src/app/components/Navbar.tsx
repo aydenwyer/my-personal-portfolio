@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import MoonIcon from '../../../public/moon-icon.svg'
 import HouseIcon from '../../../public/house-icon.svg'
+import NavLink from './NavLink'
 
 export default function Navbar() {
   return (
@@ -13,18 +14,34 @@ export default function Navbar() {
                 </div>
                 <div>
                     <p className='text-sm'>Hello, I'm</p>
-                    <p className='text-white text-lg leading-none'>Ayden Wyer</p>
+                    <p className='text-white text-lg leading-none font-medium'>Ayden Wyer</p>
                 </div>
             </div>
             
             <div className='flex gap-2'>
-                <button className='hover bg-gradient-to-br from-white/20 to-white/10 border-[1px] border-neutral-500 rounded-full p-1.5'>
-                    <Image src={MoonIcon} width={15} height={15} alt="Moon Icon"></Image>
-                </button>
                 <button className='bg-gradient-to-br from-white/20 to-white/10 border-[1px] border-neutral-500 rounded-full p-1.5'>
                     <Image src={HouseIcon} width={15} height={15} alt="House Icon"></Image>
                 </button>
             </div>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <NavLink link="/services" linkName="Services"/>
+                </li>
+                <li>
+                    <NavLink link='/projects' linkName="Projects"/>
+                </li>
+                <li>
+                    <NavLink link='/contact' linkName="Contact"/>
+                </li>
+                <li>
+                    <NavLink link='/Resume' linkName="Resume"/>
+                </li>
+                <li>
+                    <NavLink link='/Blog' linkName="Blog"/>
+                </li>
+            </ul>
         </div>
     </aside>
   )
