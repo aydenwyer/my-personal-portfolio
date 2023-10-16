@@ -16,10 +16,6 @@ export default function NavNameTag() {
             linkName: "Projects"
         },
         {
-            link: "/contact",
-            linkName: "Contact"
-        },
-        {
             link: "/Resume",
             linkName: "Resume"
         },
