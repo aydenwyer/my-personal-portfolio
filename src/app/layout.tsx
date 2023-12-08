@@ -18,9 +18,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className + "h-full bg-neutral-900 text-neutral-300 font-regular"}>
-        <main className='flex h-[100vh]'>
+        <main className='flex h-[100vh] w-[100vw]'>
           <Navbar />
-          <section>
+          <section className="bg-gradient-to-br from-[#2d2d2d] to-[#171717] grow overflow-y-auto flex justify-center py-32">
             {children}
           </section>
         </main> 
