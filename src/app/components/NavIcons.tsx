@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import NAV_ICONS from '../_constants'
+import { NAV_ICONS } from '../_constants'
 
 type Icon = {
     name: string,

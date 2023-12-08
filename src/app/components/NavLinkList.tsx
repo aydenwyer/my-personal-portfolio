@@ -1,35 +1,18 @@
-import NavLink from './NavLink'
+import NavLink from './NavLink';
+import { NAV_LINKS } from '../_constants';
 
-export default function NavNameTag() {
-    interface Link {
-        link: string,
-        linkName: string
-    }
+type Link = {
+    linkName: string,
+    link: string
+}
 
-    const navLinks: Link[] = [
-        {
-            link: "/services",
-            linkName: "Services"
-        },
-        {
-            link: "/projects",
-            linkName: "Projects"
-        },
-        {
-            link: "/Resume",
-            linkName: "Resume"
-        },
-        {
-            link: "/Blog",
-            linkName: "Blog"
-        },
-    ]
+export default function NavNameTag() {    
 
     return (
             <div className='my-10'>
                 <ul className='flex flex-col gap-1'>
-                    {navLinks.map((link) => (
-                        <li key={link.linkName}>
+                    {NAV_LINKS.map((link: Link, idx: number) => (
+                        <li key={idx}>
                             <NavLink link={link.link} linkName={link.linkName}/>
                         </li>
                     ))}
