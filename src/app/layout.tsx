@@ -1,7 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import Navbar from "./components/Navbar"
+import Navbar from "./components/navbar/Navbar"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,11 +17,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + "h-full bg-neutral-900 text-neutral-300 font-regular"}>
+      <body className={inter.className + "h-full bg-neutral-900 text-[#b1b1b1] font-regular"}>
         <main className='flex h-[100vh] w-[100vw]'>
           <Navbar />
           <section className="bg-gradient-to-br from-[#2d2d2d] to-[#171717] grow overflow-y-auto flex justify-center py-32">
-            {children}
+            <div className='z-10'>
+              {children}
+            </div>
+            <div className='background-lines fixed left-0 right-0 top-0 bottom-0 z-0 opacity-[.4]'></div>
           </section>
         </main> 
       </body>

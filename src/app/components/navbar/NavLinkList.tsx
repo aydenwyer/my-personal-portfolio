@@ -1,5 +1,5 @@
 import NavLink from './NavLink';
-import { NAV_LINKS } from '../_constants';
+import { NAV_LINKS } from '../../_constants';
 
 type Link = {
     linkName: string,

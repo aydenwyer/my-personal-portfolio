@@ -16,7 +16,7 @@ function NavLink({ link, linkName }: any) {
   }, [params]);
 
   return (
-    <Link href={link} className={`flex py-1 px-4 font-medium hover:text-white rounded-md ease-in-out duration-300 border-[1px] border-transparent ${currentHash === link || pathname === link ? "active-nav-link" : ""}`}>
+    <Link href={link} className={`flex py-1 px-4 hover:text-white rounded-sm ease-in-out duration-150 border-[1px] border-transparent ${currentHash === link || pathname === link ? "active-nav-link" : ""}`}>
       {linkName}
     </Link>
   )

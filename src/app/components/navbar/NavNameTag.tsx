@@ -1,4 +1,4 @@
-import HouseIcon from '../../../public/house-icon.svg'
+import HouseIcon from '../../../../public/house-icon.svg'
 import Image from 'next/image'
 
 export default function NavNameTag() {
@@ -9,8 +9,8 @@ export default function NavNameTag() {
                 <Image src='/profile_pic_small.png' width={43} height={43} alt="Picture of me"></Image>
             </div>
             <div>
-                <p className='text-sm'>Hello, I'm</p>
-                <p className='text-white text-lg leading-none font-medium'>Ayden Wyer</p>
+                <p className='text-sm text-[#aeaeae]'>Hello, I'm</p>
+                <p className='text-white text-lg leading-none'>Ayden Wyer</p>
             </div>
         </div>
         

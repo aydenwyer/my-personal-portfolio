@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Services from './components/ServicesSection'
 
 export const metadata: Metadata = {
   title: 'Ayden Wyer',
@@ -7,6 +8,8 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div>home</div>
+    <section className='flex flex-col gap-44'>
+      <Services /> 
+    </section>
   )
 }
