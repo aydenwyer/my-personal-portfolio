@@ -22,7 +22,7 @@ export default function RootLayout({
         <main className='flex h-[100vh] w-[100vw]'>
           <Navbar />
           <section className="bg-gradient-to-br from-[#2d2d2d] to-[#171717] grow overflow-y-auto flex justify-center pt-32">
-            <div className='z-10 flex flex-col gap-32 w-full items-center'>
+            <div className='z-10 flex flex-col gap-32 w-full items-center h-fit'>
               {children}
               <Footer />
             </div>
