@@ -1,4 +1,3 @@
-import { Serializable } from 'child_process'
 import Image from 'next/image'
 
 type ServiceCard = {
@@ -8,7 +7,7 @@ type ServiceCard = {
 
 const ServicesCard = ({heading, paragraph}: ServiceCard) => {
   return (
-        <div className="cursor-pointer flex gap-6 p-5 max-w-xl items-center rounded-md border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] transition-all ease-out duration-150 card">
+    <div className="cursor-pointer flex gap-6 p-5 max-w-xl items-center rounded-md border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] transition-all ease-out duration-150 card">
         <Image src="/test-image.png" width={270} height={150} alt="Test image" className='w-[270px] h-[150px]'/>
         <div className='flex flex-col gap-2'>
             <div className='flex gap-3 items-center card-animation transition-all ease-out'>

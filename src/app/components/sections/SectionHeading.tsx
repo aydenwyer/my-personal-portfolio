@@ -16,4 +16,4 @@ const SectionHeading = ({ preheader, header, paragraph}: Heading) => {
   )
 }
 
-export default SectionHeading
+export default SectionHeading;

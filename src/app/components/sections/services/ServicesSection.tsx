@@ -1,6 +1,6 @@
-import Heading from './SectionHeading';
+import Heading from '../SectionHeading';
 import ServiceCard from './ServicesCard'
-import Services from '../_services'
+import Services from '../../../_services'
 
 const ServicesSection = () => {
   return (
