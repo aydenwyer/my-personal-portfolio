@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
 import ActiveSectionContextProvider from "../../context/active-section-context";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           "h-full bg-neutral-900 text-[#b1b1b1] font-regular scroll-smooth"
         }
       >
+        <Toaster position="bottom-center"/>
         <main className="flex h-[100vh] w-[100vw]">
           <ActiveSectionContextProvider>
             <Navbar />
@@ -35,6 +37,7 @@ export default function RootLayout({
               </div>
               <div className="background-lines fixed left-0 right-0 top-0 bottom-0 z-0 opacity-[.4]"></div>
             </section>
+            
           </ActiveSectionContextProvider>
         </main>
       </body>

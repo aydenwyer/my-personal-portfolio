@@ -1,6 +1,7 @@
 "use client";
 
 import { sendEmail } from "@/actions/sendEmail";
+import toast from "react-hot-toast";
 
 const ContactForm = () => {
   return (
@@ -11,11 +12,11 @@ const ContactForm = () => {
         const { error } = await sendEmail(formData);
 
         if (error) {
-          alert(error);
+          toast.error(String(error))
           return;
         }
 
-        alert("Email sent successfully");
+        toast.success("Email sent successfully");
 
       }}
     >
