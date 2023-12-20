@@ -2,7 +2,7 @@
 
 import Heading from "../SectionHeading";
 import ServiceCard from "./ServicesCard";
-import Services from "../../../../../lib/_services";
+import Services from "../../../../lib/_services";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "../../../../../context/active-section-context";
