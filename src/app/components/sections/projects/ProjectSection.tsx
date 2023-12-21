@@ -1,6 +1,6 @@
 "use client";
 
-import Heading from "../SectionHeading";
+import Heading from "../../SectionHeading";
 import Projects from "../../../../lib/_projects";
 import ProjectCard from "./ProjectCard";
 import { useInView } from "react-intersection-observer";
@@ -11,7 +11,7 @@ const ProjectSection = () => {
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
   const {ref, inView} = useInView({
-    threshold: 0.75,
+    threshold: 0.5,
   });
 
   useEffect(() => {
