@@ -1,6 +1,6 @@
 "use client"
 
-import Heading from "../SectionHeading";
+import Heading from "../../SectionHeading";
 import ServiceCard from "./ServicesCard";
 import Services from "../../../../lib/_services";
 import { useEffect } from "react";

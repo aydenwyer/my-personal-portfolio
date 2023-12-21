@@ -2,6 +2,7 @@
 
 import { sendEmail } from "@/actions/sendEmail";
 import toast from "react-hot-toast";
+import SubmitBtn from '../../Button'
 
 const ContactForm = () => {
   return (
@@ -43,7 +44,7 @@ const ContactForm = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-1 mb-4">
         <label htmlFor="message">Message</label>
         <textarea
           name="message"
@@ -53,7 +54,7 @@ const ContactForm = () => {
           className="bg-white/[.03] rounded-sm border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] focus:bg-white/[.06] focus:border-[#838383] active:outline-none focus:outline-none transition-all duration-150 px-3 py-2"
         />
       </div>
-      <button type="submit">Submit</button>
+      <SubmitBtn />
     </form>
   );
 };
