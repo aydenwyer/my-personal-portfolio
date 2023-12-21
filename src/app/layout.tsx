@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Navbar from "./components/navbar/Navbar";
 import Footer from "./components/footer/Footer";
-import ActiveSectionContextProvider from "../../context/active-section-context";
+import ActiveSectionContextProvider from "../context/active-section-context";
 import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });

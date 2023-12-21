@@ -4,7 +4,7 @@ import Heading from "../SectionHeading";
 import Projects from "../../../../lib/_projects";
 import ProjectCard from "./ProjectCard";
 import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "../../../../../context/active-section-context";
+import { useActiveSectionContext } from "../../../../context/active-section-context";
 import {useEffect} from 'react';
 
 const ProjectSection = () => {

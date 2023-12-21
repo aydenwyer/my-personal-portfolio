@@ -1,7 +1,7 @@
 "use client";
 
 import { NAV_LINKS } from "../../../lib/_constants";
-import { useActiveSectionContext } from "../../../../context/active-section-context";
+import { useActiveSectionContext } from "../../../context/active-section-context";
 import Link from 'next/link'
 import clsx from 'clsx'
 

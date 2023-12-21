@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, createContext, useContext } from "react";
-import { NAV_LINKS } from "../src/lib/_constants";
+import { NAV_LINKS } from "../lib/_constants";
 
 type SectionName = (typeof NAV_LINKS)[number]["linkName"];
 
