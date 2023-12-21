@@ -32,7 +32,7 @@ const ContactForm = () => {
       }}
       onSubmit={handleSubmit}
     >
-      <div className="grid grid-flow-col grid-cols-2 gap-3">
+      <div className="grid grid-flow-row grid-cols-1 sm:grid-flow-col sm:grid-cols-2 gap-3">
         <div className="flex flex-col gap-1">
           <label htmlFor="sender-name">Name</label>
           <input

@@ -28,10 +28,10 @@ const NAV_LINKS = [
         link: "/resume",
         linkName: "Resume"
     },
-    {
-        link: "/blog",
-        linkName: "Blog"
-    },
+    // {
+    //     link: "/blog",
+    //     linkName: "Blog"
+    // },
 ]
 
 export { NAV_LINKS, NAV_ICONS };
