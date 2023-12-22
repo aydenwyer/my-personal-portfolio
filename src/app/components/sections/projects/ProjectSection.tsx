@@ -31,6 +31,7 @@ const ProjectSection = () => {
         {Projects.map((project, idx) => (
           <ProjectCard
             key={idx}
+            image={project.image}
             heading={project.projectName}
             paragraph={project.projectDesc}
             tech={project.tech}
