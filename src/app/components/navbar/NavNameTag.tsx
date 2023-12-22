@@ -19,7 +19,7 @@ export default function NavNameTag() {
         </div>
       </div>
 
-      <div className="flex gap-2">
+      {/* <div className="flex gap-2">
         <button className="bg-gradient-to-br from-white/20 to-white/10 border-[1px] border-neutral-500 rounded-full p-1.5">
           <Image
             src={HouseIcon}
@@ -28,7 +28,7 @@ export default function NavNameTag() {
             alt="House Icon"
           ></Image>
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }
