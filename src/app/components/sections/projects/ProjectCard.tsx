@@ -1,15 +1,17 @@
 import Image from "next/image";
+import Link from "next/link"
 
 type Project = {
   image: string;
   heading: string;
   paragraph: string;
   tech: string[];
+  link: string;
 };
 
-const ProjectCard = ({ heading, paragraph, tech, image }: Project) => {
+const ProjectCard = ({ heading, paragraph, tech, image, link }: Project) => {
   return (
-    <div className="max-w-xl flex flex-col sm:flex-row gap-9 items-start card cursor-pointer p-5 rounded-md border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] transition-all ease-out duration-150">
+    <Link href={link} className="max-w-xl flex flex-col sm:flex-row gap-9 items-start card cursor-pointer p-5 rounded-md border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] transition-all ease-out duration-150">
       <div className="w-[170px] h-[100px] bg-no-repeat bg-cover" style={{backgroundImage: `url(${image})`}}></div>
       <div className="flex flex-col gap-7 flex-1">
         <div className="flex flex-col gap-3">
@@ -35,7 +37,7 @@ const ProjectCard = ({ heading, paragraph, tech, image }: Project) => {
           ))}
         </ul>
       </div>
-    </div>
+    </Link>
   );
 };
 

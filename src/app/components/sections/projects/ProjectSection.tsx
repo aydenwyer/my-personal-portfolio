@@ -35,6 +35,7 @@ const ProjectSection = () => {
             heading={project.projectName}
             paragraph={project.projectDesc}
             tech={project.tech}
+            link={project.link}
           />
         ))}
       </div>
