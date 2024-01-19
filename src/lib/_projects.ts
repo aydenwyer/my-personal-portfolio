@@ -12,7 +12,7 @@ const Projects = [
         projectName: "Awesome project type shit",
         projectDesc: "Description of super cool project. This project is really cool. Description of super cool project. This project is really cool. Description of super cool project.",
         tech: ["Vite", "Mongo"],
-        link: ""
+        link: "/"
     },
     {
         
@@ -20,7 +20,7 @@ const Projects = [
         projectName: "This one sucked",
         projectDesc: "Description of super cool project. This project is really cool. Description of super cool project. This project is really cool. Description of super cool project.",
         tech: ["React", "HTML", "CSS"],
-        link: ""
+        link: "/"
     },
     {
         
@@ -28,7 +28,7 @@ const Projects = [
         projectName: "Suck my nuts",
         projectDesc: "Description of super cool project. This project is really cool. Description of super cool project. This project is really cool. Description of super cool project.",
         tech: ["C#", "SQL"],
-        link: ""
+        link: "/"
     },
 
 ]
