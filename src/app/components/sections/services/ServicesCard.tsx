@@ -7,7 +7,7 @@ type ServiceCard = {
 
 const ServicesCard = ({ heading, paragraph }: ServiceCard) => {
   return (
-    <div className="cursor-pointer flex flex-col sm:flex-row gap-6 p-5 max-w-xl items-center rounded-md border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] transition-all ease-out duration-150 card">
+    <div className="flex flex-col sm:flex-row gap-6 p-5 max-w-xl items-center rounded-md border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] transition-all ease-out duration-150 card">
       <img
         src="/test-image.png"
         alt="Test image"
