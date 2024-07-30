@@ -14,8 +14,10 @@ export default function NavNameTag() {
           ></Image>
         </div>
         <div>
-          <p className="text-sm text-[#aeaeae]">Hello, I'm</p>
-          <p className="text-white text-lg leading-none font-medium">Ayden Wyer</p>
+          <p className="text-sm text-[#aeaeae]">Hello, I&apos;m</p>
+          <p className="text-white text-lg leading-none font-medium">
+            Ayden Wyer
+          </p>
         </div>
       </div>
 

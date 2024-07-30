@@ -11,15 +11,14 @@ const NavIcons = () => {
   return (
     <div className="mt-auto flex justify-between">
       <div className="flex gap-3">
-        {NAV_ICONS.map((icon: Icon, idx) => (
-          <a target="_blank" href={icon.link} className="cursor-pointer">
-            <Image
-              key={idx}
-              src={icon.src}
-              width={18}
-              height={18}
-              alt={icon.name}
-            />
+        {NAV_ICONS.map((icon: Icon, key) => (
+          <a
+            key={key}
+            target="_blank"
+            href={icon.link}
+            className="cursor-pointer"
+          >
+            <Image src={icon.src} width={18} height={18} alt={icon.name} />
           </a>
         ))}
       </div>

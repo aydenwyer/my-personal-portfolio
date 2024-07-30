@@ -5,20 +5,20 @@ import Projects from "@/lib/_projects";
 import Card from "./Card";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import {useEffect} from 'react';
+import { useEffect } from "react";
 
 const ProjectSection = () => {
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
-  const {ref, inView} = useInView({
+  const { ref, inView } = useInView({
     threshold: 0.5,
   });
 
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Projects")
+      setActiveSection("Projects");
     }
-  }, [inView])
+  }, [inView]);
 
   return (
     <section id="projects" className="scroll-m-28" ref={ref}>
@@ -28,9 +28,9 @@ const ProjectSection = () => {
         paragraph="Here are the projects that I’ve completed to showcase my skills in coding and creating high-level design."
       />
       <div className="flex flex-col gap-2">
-        {Projects.map((project, idx) => (
+        {Projects.map((project, key) => (
           <Card
-            key={idx}
+            key={key}
             image={project.image}
             heading={project.projectName}
             paragraph={project.projectDesc}
