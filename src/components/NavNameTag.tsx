@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function NavNameTag() {
   return (
-    <div className="flex items-center justify-between border-b-[1px] border-neutral-700 pb-4">
-      <div className="flex gap-2">
+    <div className="flex items-center justify-between border-b-[1px] border-[#292929] px-1 pb-6">
+      <div className="flex gap-3">
         <div className="overflow-hidden rounded-full">
           <Image
             src="/profile_pic_small.png"
@@ -15,7 +15,7 @@ export default function NavNameTag() {
         </div>
         <div>
           <p className="text-sm text-[#aeaeae]">Hello, I'm</p>
-          <p className="text-white text-lg leading-none">Ayden Wyer</p>
+          <p className="text-white text-lg leading-none font-medium">Ayden Wyer</p>
         </div>
       </div>
 

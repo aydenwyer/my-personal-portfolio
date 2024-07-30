@@ -1,9 +1,9 @@
 "use server";
 import { Resend } from "resend";
 import { getErrorMessage } from "@/lib/_utils";
-import { FormFields } from "@/app/components/sections/contact/ContactForm";
+import { FormFields } from "@/components/ContactForm";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
 
 export const sendEmail = async (formData: FormFields) => {
   const senderName = formData.name;

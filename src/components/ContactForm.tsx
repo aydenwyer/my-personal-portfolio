@@ -2,7 +2,7 @@
 
 import { sendEmail } from "@/actions/sendEmail";
 import toast from "react-hot-toast";
-import Button from "../../Button";
+import Button from "@/components/Button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
@@ -23,6 +23,7 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm<FormFields>({
     resolver: zodResolver(formSchema),
@@ -37,33 +38,34 @@ const ContactForm = () => {
     }
 
     toast.success("Email sent successfully");
+    reset();
   };
 
   return (
     <form className="flex flex-col gap-2" onSubmit={handleSubmit(onSubmit)}>
       <div className="grid grid-flow-row grid-cols-1 sm:grid-flow-col sm:grid-cols-2 gap-3">
         <div className="flex flex-col gap-1">
-          <label htmlFor="sender-name">Name</label>
+          <label htmlFor="name">Name</label>
           <input
             {...register("name")}
             type="text"
             name="name"
             id="name"
             maxLength={30}
-            className="bg-white/[.03] rounded-sm border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] focus:bg-white/[.06] focus:border-[#838383] active:outline-none focus:outline-none transition-all duration-150 px-3 py-2"
+            className="bg-white/[.03] text-white rounded-sm border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] focus:bg-white/[.06] focus:border-[#838383] active:outline-none focus:outline-none transition-all duration-150 px-3 py-2"
           />
-          {errors.name && <div>{errors.name.message}</div>}
+          {errors.name && <div className="text-white text-xs">{errors.name.message}</div>}
         </div>
         <div className="flex flex-col gap-1">
-          <label htmlFor="sender-email">Email</label>
+          <label htmlFor="email">Email</label>
           <input
             {...register("email")}
             name="email"
             id="email"
             maxLength={100}
-            className="bg-white/[.03] rounded-sm border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] focus:bg-white/[.06] focus:border-[#838383] active:outline-none focus:outline-none transition-all duration-150 px-3 py-2"
+            className="bg-white/[.03] text-white rounded-sm border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] focus:bg-white/[.06] focus:border-[#838383] active:outline-none focus:outline-none transition-all duration-150 px-3 py-2"
           />
-          {errors.email && <div>{errors.email.message}</div>}
+          {errors.email && <div className="text-white text-xs">{errors.email.message}</div>}
         </div>
       </div>
       <div className="flex flex-col gap-1 mb-4">
@@ -73,9 +75,9 @@ const ContactForm = () => {
           name="message"
           id="message"
           rows={10}
-          className="bg-white/[.03] rounded-sm border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] focus:bg-white/[.06] focus:border-[#838383] active:outline-none focus:outline-none transition-all duration-150 px-3 py-2"
+          className="bg-white/[.03] text-white rounded-sm border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] focus:bg-white/[.06] focus:border-[#838383] active:outline-none focus:outline-none transition-all duration-150 px-3 py-2"
         />
-        {errors.message && <div>{errors.message.message}</div>}
+        {errors.message && <div className="text-white text-xs">{errors.message.message}</div>}
       </div>
       <Button isSubmitting={isSubmitting} />
     </form>

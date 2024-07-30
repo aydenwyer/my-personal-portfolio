@@ -1,8 +1,8 @@
 "use client"
 
 import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "../../../../context/active-section-context";
-import Heading from "../../SectionHeading";
+import { useActiveSectionContext } from "@/context/active-section-context";
+import Heading from "./SectionHeading";
 import ContactForm from "./ContactForm";
 import { useEffect } from "react";
 

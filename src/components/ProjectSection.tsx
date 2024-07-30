@@ -1,10 +1,10 @@
 "use client";
 
-import Heading from "../../SectionHeading";
-import Projects from "../../../../lib/_projects";
-import ProjectCard from "./ProjectCard";
+import Heading from "./SectionHeading";
+import Projects from "@/lib/_projects";
+import Card from "./Card";
 import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "../../../../context/active-section-context";
+import { useActiveSectionContext } from "@/context/active-section-context";
 import {useEffect} from 'react';
 
 const ProjectSection = () => {
@@ -29,13 +29,13 @@ const ProjectSection = () => {
       />
       <div className="flex flex-col gap-2">
         {Projects.map((project, idx) => (
-          <ProjectCard
+          <Card
             key={idx}
             image={project.image}
             heading={project.projectName}
             paragraph={project.projectDesc}
             tech={project.tech}
-            link={project.link}
+            redirect={project.link}
           />
         ))}
       </div>

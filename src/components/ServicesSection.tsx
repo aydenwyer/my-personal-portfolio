@@ -1,11 +1,11 @@
 "use client"
 
-import Heading from "../../SectionHeading";
-import ServiceCard from "./ServicesCard";
-import Services from "../../../../lib/_services";
+import Heading from "./SectionHeading";
+import Services from "@/lib/_services";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "../../../../context/active-section-context";
+import { useActiveSectionContext } from "@/context/active-section-context";
+import Card from "./Card";
 
 const ServicesSection = () => {
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
@@ -27,12 +27,15 @@ const ServicesSection = () => {
         header="What I can do for you"
         paragraph="I offer a variety of services that will help give your business the visual identity it deserves."
       />
-      <div className="flex flex-col gap-2">
+      <div className="flex gap-2">
         {Services.map((service, idx) => (
-          <ServiceCard
+          <Card
             key={idx}
             heading={service.serviceName}
             paragraph={service.serviceDescription}
+            image="/test-image.png"
+            imageWidth="full"
+            className="items-center sm:flex-col flex-1"
           />
         ))}
       </div>
