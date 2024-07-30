@@ -2,7 +2,7 @@
 
 import { NAV_LINKS } from "@/lib/_constants";
 import NavLink, { Link } from "./NavLink";
-import { FolderGit2, Mail, NotepadText, UserCog } from "lucide-react";
+import { FolderGit2, Mail, NotepadText, User, UserCog } from "lucide-react";
 
 export default function NavNameTag() {
   return (
@@ -11,8 +11,8 @@ export default function NavNameTag() {
         {NAV_LINKS.map((link: Link, key: number) => (
           <li key={key}>
             <NavLink link={link}>
-              {link.linkName === "Services" ? (
-                <UserCog width={15} />
+              {link.linkName === "About" ? (
+                <User width={15} />
               ) : link.linkName === "Projects" ? (
                 <FolderGit2 width={15} />
               ) : link.linkName === "Contact" ? (

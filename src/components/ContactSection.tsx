@@ -20,7 +20,7 @@ const ContactSection = () => {
   }, [inView]);
 
   return (
-    <section id="contact" className="scroll-m-28" ref={ref}>
+    <section id="contact" className="scroll-m-28 w-full" ref={ref}>
       <Heading preheader="contact" header="Get in touch" />
       <ContactForm />
     </section>

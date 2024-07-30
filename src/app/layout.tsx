@@ -26,12 +26,12 @@ export default function RootLayout({
           "h-full bg-neutral-900 text-[#b1b1b1] font-regular scroll-smooth"
         }
       >
-        <Toaster position="bottom-center"/>
+        <Toaster position="bottom-center" />
         <main className="flex h-[100vh] w-[100vw]">
           <ActiveSectionContextProvider>
             <Navbar />
             <section className="bg-gradient-to-br from-[#202020] to-[#171717] grow overflow-y-auto flex flex-col items-center pt-32 scroll-smooth">
-              <div className="z-10 flex flex-col gap-32 w-full items-center h-fit px-5 max-w-[580px]">
+              <div className="z-10 flex flex-col gap-32 w-full items-center h-fit px-5 max-w-[650px]">
                 {children}
               </div>
               <Footer />

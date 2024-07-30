@@ -21,17 +21,18 @@ const ProjectSection = () => {
   }, [inView]);
 
   return (
-    <section id="projects" className="scroll-m-28" ref={ref}>
+    <section id="projects" className="scroll-m-28 w-full" ref={ref}>
       <Heading
         preheader="projects"
         header="What I've been up to"
         paragraph="Here are the projects that I’ve completed to showcase my skills in coding and creating high-level design."
       />
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-2 w-full">
         {Projects.map((project, key) => (
           <Card
             key={key}
             image={project.image}
+            imageWidth="sm"
             heading={project.projectName}
             paragraph={project.projectDesc}
             tech={project.tech}

@@ -42,8 +42,11 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="flex flex-col gap-2" onSubmit={handleSubmit(onSubmit)}>
-      <div className="grid grid-flow-row grid-cols-1 sm:grid-flow-col sm:grid-cols-2 gap-3">
+    <form
+      className="flex flex-col gap-2 w-full"
+      onSubmit={handleSubmit(onSubmit)}
+    >
+      <div className="w-full grid grid-flow-row grid-cols-1 sm:grid-flow-col sm:grid-cols-2 gap-3">
         <div className="flex flex-col gap-1">
           <label htmlFor="name">Name</label>
           <input
@@ -54,7 +57,9 @@ const ContactForm = () => {
             maxLength={30}
             className="bg-white/[.03] text-white rounded-sm border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] focus:bg-white/[.06] focus:border-[#838383] active:outline-none focus:outline-none transition-all duration-150 px-3 py-2"
           />
-          {errors.name && <div className="text-white text-xs">{errors.name.message}</div>}
+          {errors.name && (
+            <div className="text-white text-xs">{errors.name.message}</div>
+          )}
         </div>
         <div className="flex flex-col gap-1">
           <label htmlFor="email">Email</label>
@@ -65,10 +70,12 @@ const ContactForm = () => {
             maxLength={100}
             className="bg-white/[.03] text-white rounded-sm border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] focus:bg-white/[.06] focus:border-[#838383] active:outline-none focus:outline-none transition-all duration-150 px-3 py-2"
           />
-          {errors.email && <div className="text-white text-xs">{errors.email.message}</div>}
+          {errors.email && (
+            <div className="text-white text-xs">{errors.email.message}</div>
+          )}
         </div>
       </div>
-      <div className="flex flex-col gap-1 mb-4">
+      <div className="flex flex-col gap-1 mb-4 w-full">
         <label htmlFor="message">Message</label>
         <textarea
           {...register("message")}
@@ -77,7 +84,9 @@ const ContactForm = () => {
           rows={10}
           className="bg-white/[.03] text-white rounded-sm border-[1px] border-transparent hover:bg-white/[.06] hover:border-[#424242] focus:bg-white/[.06] focus:border-[#838383] active:outline-none focus:outline-none transition-all duration-150 px-3 py-2"
         />
-        {errors.message && <div className="text-white text-xs">{errors.message.message}</div>}
+        {errors.message && (
+          <div className="text-white text-xs">{errors.message.message}</div>
+        )}
       </div>
       <Button isSubmitting={isSubmitting} />
     </form>

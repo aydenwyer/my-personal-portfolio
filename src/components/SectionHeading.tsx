@@ -1,12 +1,20 @@
+import clsx from "clsx";
+
 type Heading = {
   preheader: string;
   header: string;
   paragraph?: string;
+  className?: string;
 };
 
-const SectionHeading = ({ preheader, header, paragraph }: Heading) => {
+const SectionHeading = ({
+  preheader,
+  header,
+  paragraph,
+  className,
+}: Heading) => {
   return (
-    <div className="flex flex-col gap-4 max-w-lg mb-20">
+    <div className={clsx("flex flex-col gap-4 w-full mb-20", className)}>
       <div>
         <h3 className="text-sm uppercase tracking-[.2em] text-[#666666]">
           {preheader}

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <section className="flex flex-col gap-44">
+    <section className="flex flex-col gap-44 w-full">
       <Services />
       <Projects />
       <Contact />
