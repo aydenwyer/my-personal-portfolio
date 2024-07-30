@@ -1,5 +1,4 @@
 import SectionHeading from "@/components/SectionHeading";
-import BlogPostCard from "./BlogPostCard";
 
 export default function blog() {
   return (
