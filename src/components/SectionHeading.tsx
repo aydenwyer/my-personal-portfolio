@@ -1,7 +1,7 @@
 type Heading = {
   preheader: string;
   header: string;
-  paragraph: string;
+  paragraph?: string;
 };
 
 const SectionHeading = ({ preheader, header, paragraph }: Heading) => {
@@ -15,7 +15,7 @@ const SectionHeading = ({ preheader, header, paragraph }: Heading) => {
           {header}
         </h1>
       </div>
-      <p>{paragraph}</p>
+      {paragraph && <p>{paragraph}</p>}
     </div>
   );
 };

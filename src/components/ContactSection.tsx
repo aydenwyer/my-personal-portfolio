@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/active-section-context";
@@ -9,23 +9,19 @@ import { useEffect } from "react";
 const ContactSection = () => {
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
-  const {ref, inView} = useInView({
+  const { ref, inView } = useInView({
     threshold: 0.5,
-  });  
+  });
 
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Contact")
+      setActiveSection("Contact");
     }
-  }, [inView])
+  }, [inView]);
 
   return (
     <section id="contact" className="scroll-m-28" ref={ref}>
-      <Heading
-        preheader="contact"
-        header="Get in touch"
-        paragraph="Shoot me an email to get started on a project, or tell me how your day's going. I don't bite!"
-      />
+      <Heading preheader="contact" header="Get in touch" />
       <ContactForm />
     </section>
   );

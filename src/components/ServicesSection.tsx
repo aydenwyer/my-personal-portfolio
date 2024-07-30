@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Heading from "./SectionHeading";
 import Services from "@/lib/_services";
@@ -10,15 +10,15 @@ import Card from "./Card";
 const ServicesSection = () => {
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
-  const {ref, inView} = useInView({
+  const { ref, inView } = useInView({
     threshold: 0.75,
-  });  
+  });
 
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Services")
+      setActiveSection("Services");
     }
-  }, [inView])
+  }, [inView]);
 
   return (
     <section id="services" className="scroll-m-40" ref={ref}>
@@ -28,9 +28,9 @@ const ServicesSection = () => {
         paragraph="I offer a variety of services that will help give your business the visual identity it deserves."
       />
       <div className="flex gap-2">
-        {Services.map((service, idx) => (
+        {Services.map((service, key) => (
           <Card
-            key={idx}
+            key={key}
             heading={service.serviceName}
             paragraph={service.serviceDescription}
             image="/test-image.png"
