@@ -33,11 +33,11 @@ const ServicesSection = () => {
         visually stunning applications and websites that not only{" "}
         <strong className="text-white">function flawlessly</strong> but also{" "}
         <strong className="text-white">captivate audiences</strong>. With a keen
-        eye for detail, I'm driven to push boundaries and deliver impactful
+        eye for detail, I&apos;m driven to push boundaries and deliver impactful
         solutions that leave a lasting impression.
       </p>
       <p>
-        When I'm not applying my expertise, I'm involved in{" "}
+        When I&apos;m not applying my expertise, I&apos;m involved in{" "}
         <strong className="text-white">videography, golf</strong> or{" "}
         <strong className="text-white">watersports</strong>.
       </p>
