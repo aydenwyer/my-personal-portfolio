@@ -8,3 +8,8 @@ body {
     color: #b1b1b1;
     scroll-behavior: smooth;
 }
+
+.stop-scroll {
+    height: 100%;
+    overflow: hidden;
+}
