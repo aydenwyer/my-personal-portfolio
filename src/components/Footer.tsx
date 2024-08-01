@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="w-full p-5 bg-[#202020] border-neutral-800 border-t-[1px] text-center font-regular text-xs z-50 mt-32">
+    <footer className="w-full p-5 bg-[#202020] border-neutral-800 border-t-[1px] text-center font-regular text-xs z-40 mt-32">
       &copy; {new Date().getFullYear()} Ayden Wyer. All Rights Reserved.
     </footer>
   );
