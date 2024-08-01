@@ -7,7 +7,7 @@ type Project = {
   heading: string;
   paragraph: string;
   tech?: string[];
-  redirect?: string;
+  redirect?: { page: string; newTab: boolean };
   imageWidth?: "sm" | "md" | "lg" | "xl" | "full";
   className?: string;
 };
@@ -23,8 +23,8 @@ const Card = ({
 }: Project) => {
   return (
     <Link
-      href={redirect || ""}
-      target={redirect ? "_blank" : ""}
+      href={redirect?.page || ""}
+      target={redirect?.newTab ? "_blank" : ""}
       className={clsx(
         "w-full hover:backdrop-blur-[2px] flex flex-col sm:flex-row gap-9 items-start card cursor-pointer p-5 rounded-md border-[1px] group border-transparent hover:bg-white/[.02] hover:border-[#303030] transition-all ease-out duration-150",
         className

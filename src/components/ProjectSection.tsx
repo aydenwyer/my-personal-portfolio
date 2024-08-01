@@ -36,7 +36,7 @@ const ProjectSection = () => {
             heading={project.projectName}
             paragraph={project.projectDesc}
             tech={project.tech}
-            redirect={project.link}
+            redirect={{ page: project.link.page, newTab: project.link.newTab }}
           />
         ))}
       </div>

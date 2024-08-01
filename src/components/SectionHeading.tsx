@@ -19,9 +19,9 @@ const SectionHeading = ({
         <h3 className="text-sm uppercase tracking-[.2em] text-[#666666]">
           {preheader}
         </h3>
-        <h1 className="font-bold text-4xl bg-gradient-to-r from-white to-[#bdbdbd] inline-block text-transparent bg-clip-text leading-none pb-3 pt-2 sm:text-5xl sm:leading-snug sm:py-0">
+        <h2 className="font-bold text-4xl bg-gradient-to-r from-white to-[#bdbdbd] inline-block text-transparent bg-clip-text leading-none pb-3 pt-2 sm:text-5xl sm:leading-snug sm:py-0">
           {header}
-        </h1>
+        </h2>
       </div>
       {paragraph && <p>{paragraph}</p>}
     </div>

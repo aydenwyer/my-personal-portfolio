@@ -21,7 +21,7 @@ const ServicesSection = () => {
   }, [inView]);
 
   return (
-    <section id="about" className="scroll-m-40 w-full mt-32" ref={ref}>
+    <section id="about" className="scroll-m-40 w-full" ref={ref}>
       <Heading preheader="about" header="Here's my story" className="mb-10" />
       <p className="mb-5">
         As a Computer Science major at{" "}
