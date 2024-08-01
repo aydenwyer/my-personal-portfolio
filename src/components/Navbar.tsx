@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <aside
       className={clsx(
-        "fixed top-0 bottom-0 flex justify-between lg:static bg-[#202020] border-r-[1px] border-[#292929] w-72 px-4 py-6 flex-col z-50 transition-all duration-300 ease-in-out",
+        "fixed top-0 h-screen flex justify-between lg:static bg-[#202020] border-r-[1px] border-[#292929] w-72 px-4 py-6 flex-col z-50 transition-all duration-300 ease-in-out",
         navOpen ? "right-0" : "-right-72"
       )}
     >
