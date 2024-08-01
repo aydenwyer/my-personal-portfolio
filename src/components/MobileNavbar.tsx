@@ -3,25 +3,10 @@
 import { Menu } from "lucide-react";
 import NavNameTag from "./NavNameTag";
 import { useNavbarStateContext } from "@/context/navbar-state-context";
-import { useEffect, useState } from "react";
 import clsx from "clsx";
 
 const MobileNavbar = () => {
   const { navOpen, setNavOpen } = useNavbarStateContext();
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div
