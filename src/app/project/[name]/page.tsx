@@ -23,7 +23,12 @@ const page = async ({ params }: { params: { name: string } }) => {
 
   return (
     <section className="flex flex-col gap-10">
-      <Button text="Back" iconLeft={<ArrowLeft width={18} />} />
+      <Button
+        className="w-fit"
+        text="Back"
+        iconLeft={<ArrowLeft width={18} />}
+        onClick="/#projects"
+      />
       <div>
         <h3 className="text-sm uppercase tracking-[.2em] text-[#666666]">
           {data.company}
