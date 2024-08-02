@@ -1,10 +1,20 @@
 import fs from "fs";
 import path from 'path'
 
+type Project = {
+  name: string,
+  company: string,
+  mainImage: string,
+  problem: string,
+  ideation: string,
+  functionality: string[],
+  futurePlans: string[]
+}
+
 const page = async ({ params }: { params: { name: string } }) => {
   let projectPath = path.join(process.cwd(), `/src/lib/projects/${params.name}.json`)
   let file = fs.readFileSync(projectPath, 'utf-8')
-  const data = JSON.parse(file);
+  const data: Project = JSON.parse(file);
 
   return (
     <section className="flex flex-col gap-10">
@@ -17,6 +27,8 @@ const page = async ({ params }: { params: { name: string } }) => {
         </h1>
       </div>
 
+      <img src={data.mainImage} className="w-full rounded-md"/>
+
       <div>
         <h2 className="font-medium text-lg text-[#dadada] inline-block leading-none mb-3 sm:text-xl sm:leading-snug sm:py-0">
           Problem
@@ -28,6 +40,26 @@ const page = async ({ params }: { params: { name: string } }) => {
           Solution
         </h2>
         <p>{data.ideation}</p>
+      </div>
+      <div>
+        <h2 className="font-medium text-lg text-[#dadada] inline-block leading-none mb-3 sm:text-xl sm:leading-snug sm:py-0">
+          Functionality
+        </h2>
+        <ul className="list-disc">
+          {data.functionality.map((item, key) => (
+            <li key={key}>{item}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2 className="font-medium text-lg text-[#dadada] inline-block leading-none mb-3 sm:text-xl sm:leading-snug sm:py-0">
+          Future plans
+        </h2>
+        <ul className="list-disc">
+          {data.futurePlans.map((item, key) => (
+            <li key={key}>{item}</li>
+          ))}
+        </ul>
       </div>
     </section>
   );
