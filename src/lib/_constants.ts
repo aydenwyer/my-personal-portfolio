@@ -8,7 +8,7 @@ const NAV_ICONS = [
     name: "LinkedIn Icon",
     src: "/linked-in.svg",
     link: "https://www.linkedin.com/in/aydenwyer/",
-  },
+  }
 ];
 
 const NAV_LINKS = [
@@ -23,10 +23,6 @@ const NAV_LINKS = [
   {
     link: "/#contact",
     linkName: "Contact",
-  },
-  {
-    link: "/resume",
-    linkName: "Resume",
   },
   // {
   //     link: "/blog",

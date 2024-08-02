@@ -1,11 +1,9 @@
 "use client";
 
 import Heading from "./SectionHeading";
-import Services from "@/lib/_services";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/active-section-context";
-import Card from "./Card";
 
 const ServicesSection = () => {
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
