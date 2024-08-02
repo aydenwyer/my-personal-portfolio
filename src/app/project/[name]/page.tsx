@@ -1,4 +1,6 @@
+import Button from "@/components/Button";
 import { promises as fs } from "fs";
+import { ArrowLeft } from "lucide-react";
 
 const page = async ({ params }: { params: { name: string } }) => {
   const file = await fs.readFile(
@@ -9,6 +11,7 @@ const page = async ({ params }: { params: { name: string } }) => {
 
   return (
     <section className="flex flex-col gap-10">
+      <Button text="Back" iconLeft={<ArrowLeft width={18} />} />
       <div>
         <h3 className="text-sm uppercase tracking-[.2em] text-[#666666]">
           {data.company}

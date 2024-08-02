@@ -6,6 +6,7 @@ import Button from "@/components/Button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { z } from "zod";
+import { ArrowUpRight } from "lucide-react";
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
@@ -87,7 +88,11 @@ const ContactForm = () => {
           <div className="text-white text-xs">{errors.message.message}</div>
         )}
       </div>
-      <Button isSubmitting={isSubmitting} />
+      <Button
+        text="Submit"
+        isSubmitting={isSubmitting}
+        iconRight={<ArrowUpRight width={18} />}
+      />
     </form>
   );
 };
