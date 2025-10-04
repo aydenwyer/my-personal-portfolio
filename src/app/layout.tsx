@@ -30,7 +30,7 @@ export default function RootLayout({
               <Navbar />
               <section className="bg-gradient-to-br from-[#202020] to-[#171717] grow overflow-y-auto overflow-x-hidden lg:overflow-y-scroll flex flex-col items-center scroll-smooth">
                 <MobileNavbar />
-                <div className="py-32 pt-40 lg:pt-32 flex flex-1 flex-col gap-32 w-full items-center px-6 max-w-[650px]">
+                <div className="py-32 pt-40 lg:pt-32 flex flex-1 flex-col gap-32 w-full items-center px-6 max-w-[650px] scroll-m-0">
                   {children}
                 </div>
                 <Footer />

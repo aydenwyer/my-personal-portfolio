@@ -1,23 +1,34 @@
 import fs from "fs";
-import path from 'path'
+import path from "path";
+import Button from "@/components/Button";
+import { ArrowLeft } from "lucide-react";
 
 type Project = {
-  name: string,
-  company: string,
-  mainImage: string,
-  problem: string,
-  ideation: string,
-  functionality: string[],
-  futurePlans: string[]
-}
+  name: string;
+  company: string;
+  mainImage: string;
+  problem: string;
+  ideation: string;
+  functionality: string[];
+  futurePlans: string[];
+};
 
 const page = async ({ params }: { params: { name: string } }) => {
-  let projectPath = path.join(process.cwd(), `/src/lib/projects/${params.name}.json`)
-  let file = fs.readFileSync(projectPath, 'utf-8')
+  let projectPath = path.join(
+    process.cwd(),
+    `/src/lib/projects/${params.name}.json`
+  );
+  let file = fs.readFileSync(projectPath, "utf-8");
   const data: Project = JSON.parse(file);
 
   return (
     <section className="flex flex-col gap-10">
+      <Button
+        className="w-fit"
+        text="Back"
+        iconLeft={<ArrowLeft width={18} />}
+        onClick="/#projects"
+      />
       <div>
         <h3 className="text-sm uppercase tracking-[.2em] text-[#666666]">
           {data.company}
@@ -27,7 +38,7 @@ const page = async ({ params }: { params: { name: string } }) => {
         </h1>
       </div>
 
-      <img src={data.mainImage} className="w-full rounded-md"/>
+      <img src={data.mainImage} className="w-full rounded-md" />
 
       <div>
         <h2 className="font-medium text-lg text-[#dadada] inline-block leading-none mb-3 sm:text-xl sm:leading-snug sm:py-0">
