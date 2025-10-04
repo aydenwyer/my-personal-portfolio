@@ -6,40 +6,66 @@ import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/active-section-context";
 
 const ServicesSection = () => {
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+	const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
-  const { ref, inView } = useInView({
-    threshold: 0.75,
-  });
+	const { ref, inView } = useInView({
+		threshold: 0.75,
+	});
 
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("About");
-    }
-  }, [inView]);
+	useEffect(() => {
+		if (inView && Date.now() - timeOfLastClick > 1000) {
+			setActiveSection("About");
+		}
+	}, [inView]);
 
-  return (
-    <section id="about" className="scroll-m-40 w-full" ref={ref}>
-      <Heading preheader="about" header="Here's my story" className="mb-10" />
-      <p className="mb-5">
-        As a Computer Science major at{" "}
-        <strong className="text-white">Kansas State University</strong>, I bring
-        a unique blend of technical expertise and creative flair to the table.
-        With a focus on{" "}
-        <strong className="text-white">software development</strong> and{" "}
-        <strong className="text-white">design</strong>, I thrive on crafting
-        visually stunning applications and websites that not only{" "}
-        <strong className="text-white">function flawlessly</strong> but also{" "}
-        <strong className="text-white">captivate audiences</strong>. With a keen
-        eye for detail, I&apos;m driven to push boundaries and deliver impactful
-        solutions that leave a lasting impression.
-      </p>
-      <p>
-        When I&apos;m not applying my expertise, I&apos;m involved in{" "}
-        <strong className="text-white">videography, golf</strong> or{" "}
-        <strong className="text-white">watersports</strong>.
-      </p>
-      {/* <div className="flex gap-2">
+	return (
+		<section
+			id="about"
+			className="scroll-m-40 w-full"
+			ref={ref}
+		>
+			<Heading
+				preheader="about"
+				header="Here's my story"
+				className="mb-10"
+			>
+				<div className="flex gap-10">
+					<div>
+						<div className="bg-gradient-to-b from-transparent via-[#666666] to-transparent h-full w-[2px] rounded-full" />
+					</div>
+					<div className="flex flex-col gap-3">
+						<div className="relative">
+							<div className="bg-[#666666] w-2 aspect-square absolute rounded-full -left-[45px] top-1/2" />
+							<p>
+								My software journey started out from my initial interest in the
+								web. With a background in design, I wanted to take my website
+								design skills a step further and learn the process of website
+								development.
+							</p>
+						</div>
+
+						<div className="relative">
+							<div className="bg-[#666666] w-2 aspect-square absolute rounded-full -left-[45px] top-1/2" />
+							<p>
+								From there, I then studied Computer Science at Kansas State
+								University, where I learned the ins and outs of programming
+								through long nights of Object Oriented Programming, Data
+								Structures and Algorithms, Software Architecture, and much more.
+							</p>
+						</div>
+
+						<div className="relative">
+							<div className="bg-[#666666] w-2 aspect-square absolute rounded-full -left-[45px] top-1/2" />
+							<p>
+								I now have the skills to create robust software with an eye
+								catching design, and am striving to continue learning new
+								technologies and adapting to future challenges.
+							</p>
+						</div>
+					</div>
+				</div>
+			</Heading>
+			{/* <div className="flex gap-2">
         {Services.map((service, key) => (
           <Card
             key={key}
@@ -51,8 +77,8 @@ const ServicesSection = () => {
           />
         ))}
       </div> */}
-    </section>
-  );
+		</section>
+	);
 };
 
 export default ServicesSection;

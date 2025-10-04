@@ -34,8 +34,6 @@ export default function RootLayout({
                   {children}
                 </div>
                 <Footer />
-                {/* <div className="background-lines fixed left-0 right-0 top-0 bottom-0 z-0 opacity-[.2]"></div>
-              <div className="background-lines fixed left-0 right-0 top-0 bottom-0 z-0 opacity-[.2] rotate-90"></div> */}
               </section>
             </NavbarStateContextProvider>
           </ActiveSectionContextProvider>

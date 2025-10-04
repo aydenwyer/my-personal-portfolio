@@ -25,7 +25,7 @@ const ProjectSection = () => {
       <Heading
         preheader="projects"
         header="What I've been up to"
-        paragraph="Here are the projects that I’ve completed to showcase my skills in coding and creating high-level design."
+        paragraph="Here are the projects that I’ve completed to showcase my skills in programming and design."
       />
       <div className="flex flex-col gap-2 w-full">
         {Projects.map((project, key) => (

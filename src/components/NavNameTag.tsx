@@ -10,11 +10,11 @@ export default function NavNameTag({ className }: { className?: string }) {
 			)}
 		>
 			<div className="flex gap-3">
-				<div className="overflow-hidden rounded-full">
+				<div className="overflow-hidden rounded-full w-11 aspect-square flex items-center justify-center">
 					<Image
-						src="/profile_pic_small.png"
-						width={43}
-						height={43}
+						src="/profile_pic_small.jpg"
+						width={44}
+						height={44}
 						alt="Picture of me"
 					></Image>
 				</div>

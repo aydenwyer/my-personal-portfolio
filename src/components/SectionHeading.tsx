@@ -1,16 +1,19 @@
 import clsx from "clsx";
+import { ReactNode } from "react";
 
 type Heading = {
   preheader: string;
   header: string;
   paragraph?: string;
   className?: string;
+  children?: ReactNode
 };
 
 const SectionHeading = ({
   preheader,
   header,
   paragraph,
+  children,
   className,
 }: Heading) => {
   return (
@@ -24,6 +27,7 @@ const SectionHeading = ({
         </h2>
       </div>
       {paragraph && <p>{paragraph}</p>}
+      {children}
     </div>
   );
 };
